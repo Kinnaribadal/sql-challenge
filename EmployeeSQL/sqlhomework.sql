@@ -21,12 +21,12 @@ SELECT dm.dept_no, dept.dept_name, dm.emp_no, e.first_name, e.last_name
 	
 -- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 --SELECT * FROM departments
-SELECT dept.dept_name, dm.emp_no, e.first_name, e.last_name
-	FROM dept_manager as dm
+SELECT dept.dept_name, e.emp_no, e.first_name, e.last_name
+	FROM dept_emp as de
 	JOIN departments as dept
-	ON (dm.dept_no = dept.dept_no)
+	ON (de.dept_no = dept.dept_no)
 	JOIN employee as e
-	ON (dm.emp_no = e.emp_no);
+	ON (de.emp_no = e.emp_no);
 	
 -- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 SELECT first_name, last_name, sex FROM employee WHERE first_name = 'Hercules' AND last_name LIKE 'B%'
@@ -54,13 +54,13 @@ FROM employee
 group by last_name
 order by count(last_name) desc;
 
-SELECT e.emp_no, e.first_name, e.last_name, dept.dept_name
-	FROM employee as e
-	INNER JOIN dept_emp as de
-	ON (e.emp_no = de.emp_no)
-	JOIN departments as dept
-	ON (de.dept_no = dept.dept_no)
-	WHERE dept.dept_name = 'Sales';
+-- SELECT e.emp_no, e.first_name, e.last_name, dept.dept_name
+-- 	FROM employee as e
+-- 	INNER JOIN dept_emp as de
+-- 	ON (e.emp_no = de.emp_no)
+-- 	JOIN departments as dept
+-- 	ON (de.dept_no = dept.dept_no)
+-- 	WHERE dept.dept_name = 'Sales';
 	
 	
 	
