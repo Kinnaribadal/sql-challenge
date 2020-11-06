@@ -10,13 +10,13 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 ## Submission
 
-* Create an image file of your ERD.
+* Create an image file of your ERD."QuickDBD-Free Diagram.png"
 
-* Create a `.sql` file of your table schemata.
+* Create a `.sql` file of your table schemata."quickdbfdiagram.sql"
 
-* Create a `.sql` file of your queries.
+* Create a `.sql` file of your queries."sqlhomework.sql"
 
-* (Optional) Create a Jupyter Notebook of the bonus analysis.
+* (Optional) Create a Jupyter Notebook of the bonus analysis."bonus_analysis.ipynb"
 
 * Create and upload a repository with the above files to GitHub and post a link on BootCamp Spot.
 
